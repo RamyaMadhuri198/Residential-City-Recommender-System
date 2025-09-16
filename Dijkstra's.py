@@ -32,7 +32,7 @@ else:
             destination = cities[j]
             if origin == destination:
                 continue
-            url = f"https://maps.googleapis.com/maps/api/distancematrix/json?origins={origin}&destinations={destination}&key=AIzaSyBopeGxSm80ys0jkzxUReY5l6h1SPSX1OE" 
+            url = f"https://maps.googleapis.com/maps/api/distancematrix/json?origins={origin}&destinations={destination}&key=give_you_api_key_here" 
             response = requests.get(url)
             time.sleep(1)
             data = response.json()
@@ -273,5 +273,6 @@ if best_city:
     print(f"Optimal balance of commute and cost of living: {best_total_cost:.4f}")
 else:
     print(" Could not determine the best city due to missing data.")
+
 
 
